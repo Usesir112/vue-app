@@ -2,7 +2,7 @@ deployment:
   name: "vue-app-deployment"
   namespace: "default"
   replicas: 2
-  image: "usesir/vue-app:beta"
+  image: "nginx:stable-alpine3.17-slim"
   port: 8080
 
 service:
