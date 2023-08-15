@@ -3,6 +3,6 @@ spec:
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/Usesir112/vue-app.git
-    targetRevision: workshop
+    targetRevision: dev
   ingress:
     host: vue.demo.com
