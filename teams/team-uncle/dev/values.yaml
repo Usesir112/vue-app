@@ -10,9 +10,3 @@ service:
   port: 8080
   protocol: TCP
   type: ClusterIP
-
-# ingress:
-#   name: "vue-app-ingress"
-#   namespace: "default"
-#   host: "minikube-vue-app.local"
-#   tls: "vue-app-tls"
