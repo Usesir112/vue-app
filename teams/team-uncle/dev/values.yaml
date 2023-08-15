@@ -2,17 +2,17 @@ deployment:
   name: "vue-app-deployment"
   namespace: "default"
   replicas: 2
-  image: "nginx:stable-alpine3.17-slim"
+  image: "usesir/vue-app:beta"
   port: 8080
 
 service:
   name: "vue-app-service"
   port: 8080
   protocol: TCP
-  type: NodePort
+  type: ClusterIP
 
-ingress:
-  name: "vue-app-ingress"
-  namespace: "default"
-  host: "vue.app.demo.com"
-  tls: "vue-app-tls"
+# ingress:
+#   name: "vue-app-ingress"
+#   namespace: "default"
+#   host: "minikube-vue-app.local"
+#   tls: "vue-app-tls"
