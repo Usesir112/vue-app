@@ -14,5 +14,5 @@ service:
 ingress:
   name: "vue-app-ingress"
   namespace: "default"
-  host: "minikube-vue-app.local"
+  host: "vue.app.demo.com"
   tls: "vue-app-tls"
