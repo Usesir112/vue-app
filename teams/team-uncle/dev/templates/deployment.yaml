@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.deployment.name }}
-  namespace: {{ .Values.deployment.namespace }}
+  name: vue-app-deployment # {{ .Values.deployment.name }}
   labels:
-    app: {{ .Values.deployment.name }}
+    app: vue-app-deployment # {{ .Values.deployment.name }}
 spec:
-  replicas: {{ .Values.deployment.replicas }}
+  replicas: 2 # {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
-      app: {{ .Values.deployment.name }}
+      app: vue-app-deployment # {{ .Values.deployment.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.deployment.name }}
+        app: vue-app-deployment # {{ .Values.deployment.name }}
     spec:
       containers:
-      - name: {{ .Values.deployment.name }}
-        image: {{ .Values.deployment.image }}
+      - name: vue-app-deployment # {{ .Values.deployment.name }}
+        image: usesir/vue-app:x86 # {{ .Values.deployment.image }}
         ports:
-        - containerPort: {{ .Values.deployment.port }}
+        - containerPort: 8080 # {{ .Values.deployment.port }}
