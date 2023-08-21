@@ -2,7 +2,7 @@ deployment:
   name: "vue-app-deployment"
   namespace: "default"
   replicas: 2
-  image: "usesir/vue-app:beta"
+  image: "usesir/vue-app:x86"
   port: 8080
 
 service:
