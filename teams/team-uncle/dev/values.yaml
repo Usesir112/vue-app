@@ -8,5 +8,3 @@ deployment:
 service:
   name: "vue-app-service"
   port: 8080
-  protocol: TCP
-  type: ClusterIP
