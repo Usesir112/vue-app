@@ -3,10 +3,10 @@ deployment:
   namespace: "default"
   replicas: 2
   image: "usesir/vue-app:x86"
-  port: 80
+  port: 3000
 
 service:
   name: "vue-app-service"
-  port: 8080
+  port: 3000
   protocol: TCP
   type: ClusterIP
