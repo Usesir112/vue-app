@@ -8,14 +8,14 @@ spec:
   replicas: { { .Values.deployment.replicas } }
   selector:
     matchLabels:
-      app: { { .Values.deployment.name } }
+      app: {{ .Values.deployment.name }}
   template:
     metadata:
       labels:
-        app: { { .Values.deployment.name } }
+        app: {{ .Values.deployment.name }}
     spec:
       containers:
-        - name: { { .Values.deployment.name } }
-          image: { { .Values.deployment.image } }
+        - name: {{ .Values.deployment.name }}
+          image: {{ .Values.deployment.image }}
           ports:
-            - containerPort: { { .Values.deployment.port } }
+            - containerPort: {{ .Values.deployment.port }}
