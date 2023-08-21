@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: { { .Values.deployment.name } }
+  name: {{ .Values.deployment.name }}
   labels:
-    app: { { .Values.deployment.name } }
+    app: {{ .Values.deployment.name }}
 spec:
-  replicas: { { .Values.deployment.replicas } }
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
       app: {{ .Values.deployment.name }}
