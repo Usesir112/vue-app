@@ -6,7 +6,9 @@ spec:
   selector:
     app: vue-app-deployment # {{ .Values.deployment.name }}
   ports:
-   - port: 8080 # {{ .Values.service.port }}
+   - protocol: TCP # {{ .Values.service.protocol }}
+     name: http 
+     port: 8080 # {{ .Values.service.port }}
      targetPort: 8080 # {{ .Values.deployment.port }}
   type: ClusterIP # {{ .Values.service.type }}
   
