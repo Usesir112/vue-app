@@ -1,10 +1,9 @@
-deployment:
-  name: "vue-app-deployment"
-  namespace: "default"
-  replicas: 2
-  image: "usesir/vue-app:x86"
-  port: 8080
 
-service:
-  name: "vue-app-service"
-  port: 8080
+serviceName: "vue-app"
+image: "usesir/vue-app:x86"
+replicas: 1
+port: 80
+namespace: "team-uncle"
+ingressClass: "nginx"
+host: "uncle-arm.devsecops.wisesight.dev"
+
