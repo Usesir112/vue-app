@@ -13,7 +13,7 @@ spec:
         app: vue-app
     spec:
       containers:
-        - name: "vue-app"
-          image: "usesir/vue-app:x86"
+        - name: vue-app
+          image: usesir/vue-app:x86
           ports:
             - containerPort: 80
