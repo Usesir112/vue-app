@@ -14,7 +14,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 8080
+        - name: nginx
+          image: usesir/vue-app:x86
+          ports:
+            - containerPort: 80
