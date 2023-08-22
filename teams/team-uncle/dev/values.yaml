@@ -1,9 +1,2 @@
 
-serviceName: "vue-app"
-image: "usesir/vue-app:x86"
-replicas: 1
-port: 80
-namespace: "team-uncle"
-ingressClass: "nginx"
-host: "uncle-arm.devsecops.wisesight.dev"
 
