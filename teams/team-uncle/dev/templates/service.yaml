@@ -6,5 +6,5 @@ spec:
   selector:
     app: "vue-app"
   ports:
-    - port: 80
+    - port: 8080
       targetPort: 80
