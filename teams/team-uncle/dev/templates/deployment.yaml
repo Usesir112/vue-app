@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: { { .Values.serviceName } }
+  name: vue-app-deployment
 spec:
-  replicas: { { .Values.replicas } }
+  replicas: 1
   selector:
     matchLabels:
-      app: { { .Values.serviceName } }
+      app: vue-app
   template:
     metadata:
       labels:
-        app: { { .Values.serviceName } }
+        app: vue-app
     spec:
       containers:
-        - name: { { .Values.serviceName } }
-          image: { { .Values.image } }
+        - name: "vue-app"
+          image: "usesir/vue-app:x86"
           ports:
-            - containerPort: { { .Values.port } }
+            - containerPort: 80
