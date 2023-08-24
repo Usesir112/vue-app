@@ -1,0 +1,1 @@
+export { readYamlToJson } from "./config";
