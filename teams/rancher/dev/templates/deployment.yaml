@@ -19,3 +19,26 @@ spec:
           image: rancher/rancher:stable
           ports:
             - containerPort: 80
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: rancher
+  labels:
+    app: rancher
+  namespace: cattle-system
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: rancher
+  labels:
+    app: rancher
+subjects:
+  - kind: ServiceAccount
+    name: rancher
+    namespace: cattle-system
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
