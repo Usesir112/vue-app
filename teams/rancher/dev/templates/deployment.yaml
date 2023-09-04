@@ -19,9 +19,3 @@ spec:
           image: rancher/rancher:stable
           ports:
             - containerPort: 80
-            - containerPort: 443
-          args:
-            - --http-listen-port=80
-            - --https-listen-port=443
-            - --hostname=rancher.my.org
-            - --tls=external
