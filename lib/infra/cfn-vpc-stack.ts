@@ -13,7 +13,7 @@ export class CfnVpcStack extends cdk.Stack {
      */
     const vpc = new ec2.CfnVPC(this, "Creating VPC from CfnVPC", {
       cidrBlock: vpcCidr,
-      tags: [{ key: "Name", value: "CFN_VPC" }],
+      tags: [{ key: "Name", value: "rancher-experimental" }],
     });
     /**
      * Export VPC ID

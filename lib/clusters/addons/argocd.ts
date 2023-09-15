@@ -40,7 +40,7 @@ export const bootstrapArgo = new blueprints.ArgoCDAddOn({
       /**
        * For make app redirect to correctly url
        */
-      config: {
+      configs: {
         url: url,
       },
       /**

@@ -1,13 +1,12 @@
 cluster:
-  vpcID: vpc-055a4903f5f9fd0a7
+  vpcID: vpc-041cf4d25d6784576
   myCertArn: arn:aws:acm:ap-southeast-1:587960863861:certificate/7b28b68c-df64-44dc-8eac-3057805dbf46
 
 genericClusterProvider:
   managedNodeGroupsId: mng1
-  amiType: eks.NodegroupAmiType.AL2_X86_64
   instanceType: t3.medium
-  desiredSize: 2
-  maxSize: 3
+  desiredSize: 3
+  maxSize: 5
 
 addOns:
   nginx:

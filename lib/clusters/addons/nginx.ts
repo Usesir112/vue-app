@@ -18,4 +18,5 @@ export const AwsLoadBalancerControllerAddOn =
 export const nginxAddOn = new blueprints.addons.NginxAddOn({
   certificateResourceName: blueprints.GlobalResources.Certificate,
   externalDnsHostname,
+  
 });

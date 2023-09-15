@@ -3,7 +3,7 @@ import * as blueprints from "@aws-quickstart/eks-blueprints";
 import * as eks from "aws-cdk-lib/aws-eks";
 
 /**
- * Use to inport configurations 
+ * Use to inport configurations
  */
 import { readYamlToJson } from "../utils";
 const env: string = process.env.ENV_NAME || "dev";
@@ -30,7 +30,7 @@ export const genericClusterProvider = new blueprints.GenericClusterProvider({
       /**
        * ami type MUST be matched with the Instance Type.
        */
-      amiType: amiType,
+      amiType: eks.NodegroupAmiType.AL2_X86_64,
       /**
        * The Version of Blueprint and aws-cdk MUST be matched.
        * (You can see the version in github release page)

@@ -4,8 +4,12 @@ import { Construct } from "constructs";
 import * as blueprints from "@aws-quickstart/eks-blueprints";
 import "source-map-support/register";
 import { genericClusterProvider } from "./cluster-providers/generic-cluster-provider";
+/**
+ * Add-ons Imports
+ */
 import { bootstrapArgo } from "./addons/argocd";
 import { AwsLoadBalancerControllerAddOn, nginxAddOn } from "./addons/nginx";
+import { RancherAddOn } from "./addons/rancher";
 /**
  * Use to inport configurations
  */
@@ -34,6 +38,7 @@ export default class ClusterConstruct extends Construct {
       AwsLoadBalancerControllerAddOn,
       nginxAddOn,
       bootstrapArgo,
+      // new RancherAddOn(),
     ];
     /**
      * Main Blueprint Configuration
@@ -58,7 +63,10 @@ export default class ClusterConstruct extends Construct {
        */
       .resourceProvider(
         blueprints.GlobalResources.Certificate,
-        new blueprints.ImportCertificateProvider(myCertArn, "cert1-id")
+        new blueprints.ImportCertificateProvider(
+          myCertArn,
+          "7b28b68c-df64-44dc-8eac-3057805dbf46"
+        )
       )
       .addOns(...addOns)
       .account(account)
